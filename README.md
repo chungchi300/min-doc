@@ -24,7 +24,7 @@ npm run generate-watch
 
 ## Example
 
-![在优酷上观看](http://v.youku.com/v_show/id_XMzU0NzE5NjkzNg==.html?spm=a2hzp.8244740.0.0)
+[![在优酷上观看](https://t4.ftcdn.net/jpg/01/12/56/73/240_F_112567399_fVHoy5kIkNXdDnwCSpaSkDC3wmH9NVCs.j(http://v.youku.com/v_show/id_XMzM0NDQ5MDg1Ng==.html?spm=a2hzp.8253869.0.0)
 
 
 * [Self](./docs/self/gen.doc.html)
