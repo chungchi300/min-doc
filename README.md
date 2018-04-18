@@ -24,7 +24,9 @@ npm run generate-watch
 
 ## Example
 
-[Self](./docs/self/gen.doc.html)
+* [Self](./docs/self/gen.doc.html)
+* [Demo](https://github.com/chungchi300/min-doc-demo)
+
 
 ## Optional
 
