@@ -2,7 +2,7 @@
 
 min-doc is an **hackable simple documentation generation template** that support **.md=>html** and **.plantuml=>img** tool.
 
-## Pretty
+## Advantage
 
 * **Easy install** - All you need is having **node and npm installed**
 * **Easy editing** - All you need is text editor like(nodepad++) to **draw different graph and styling**.
@@ -23,6 +23,9 @@ npm run generate-watch
 ```
 
 ## Example
+
+[![在优酷上观看](http://v.youku.com/v_show/id_XMzU0NzE5NjkzNg==.html?spm=a2hzp.8244740.0.0)
+
 
 * [Self](./docs/self/gen.doc.html)
 * [Demo](https://github.com/chungchi300/min-doc-demo)
