@@ -6,7 +6,7 @@
   "scripts": {
     "generate": "node generate.js",
     "generate-watch":
-      "nodemon -e md,plantuml --watch  docs --watch generate.js generate.js"
+      "npx --no-install nodemon -e md,plantuml --watch  docs --watch generate.js generate.js"
   },
   "repository": {
     "type": "git",
