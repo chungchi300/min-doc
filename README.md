@@ -15,10 +15,10 @@ min-doc is an **hackable simple documentation generation template** that support
 ```
 git clone git@github.com:chungchi300/min-doc.git yourProject
 npm install
-npm run generate
+npm run build
 /*
 if you want to automatically generate file after editing.
-npm run generate-watch
+npm run build-watch
 */
 ```
 

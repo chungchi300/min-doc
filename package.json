@@ -4,8 +4,8 @@
   "description": "hackable simple documentation generation template",
   "main": "index.js",
   "scripts": {
-    "generate": "node generate.js",
-    "generate-watch":
+    "build": "node generate.js",
+    "build-watch":
       "npx --no-install nodemon -e md,plantuml --watch  docs --watch generate.js generate.js"
   },
   "repository": {
