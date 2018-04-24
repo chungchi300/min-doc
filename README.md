@@ -10,6 +10,11 @@ min-doc is an **hackable simple documentation generation template** that support
 * **Github-like html style** - Because when **html generated from markdown** using the **github markdown css**
 * **hackable** - Want to integrate with [mindmap](https://github.com/fex-team/kityminder-editor)?Want to have .mp3 file?Simply Modify the `generate.js` file and **create your own documentation generation tool**.
 
+## Target User
+1. User that are familar with markdown.[Best markdown tutorial with online WYSIWYG Editior online](!https://www.markdowntutorial.com/)
+2. User that need to draw **massive** uml and diagram **efficiently**.[Plantuml](!http://plantuml.com/)
+
+
 ## Usage
 
 ```
@@ -32,7 +37,7 @@ npm run build-watch
 * [Demo](https://github.com/chungchi300/min-doc-demo)
 
 
-## Optional
+## Optional Tool
 
 Despite you can edit using any text editor,there is some **plugins and editor** suggested to use for **real time preview & wysiwyg**
 on **single file**
