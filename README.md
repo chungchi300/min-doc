@@ -8,7 +8,7 @@ min-doc is an **hackable simple documentation generation template** that support
 * **Easy editing** - All you need is text editor like(nodepad++) to **draw different graph and styling**.
 * **Good verision control** - Because **plantuml** allow Easily create UML Diagrams(Flow chart,Sequence diagram,Class diagram) from **simple textual description**.
 * **Github-like html style** - Because when **html generated from markdown** using the **github markdown css**
-* **hackable** - Want to integrate with [mindmap](https://github.com/fex-team/kityminder-editor)?Want to have .mp3 file?Simply Modify the `generate.js` file and **create your own documentation generation tool**.
+* **hackable** - Want to integrate with [mindmap](https://github.com/fex-team/kityminder-editor)?Want to [Write diagram inside markdown](https://mermaidjs.github.io/)?Want to have .mp3 file?Simply Modify the `generate.js` file and **create your own documentation generation tool**.
 
 ## Target User
 1. User that are familar with markdown.[Best markdown tutorial with online WYSIWYG Editior online](https://www.markdowntutorial.com/)
