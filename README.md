@@ -11,7 +11,7 @@ min-doc is an **hackable simple documentation generation template** that support
 * **hackable** - Want to integrate with [mindmap](https://github.com/fex-team/kityminder-editor)?Want to have .mp3 file?Simply Modify the `generate.js` file and **create your own documentation generation tool**.
 
 ## Target User
-1. User that are familar with markdown.[Best markdown tutorial with online WYSIWYG Editior online](!https://www.markdowntutorial.com/)
+1. User that are familar with markdown.[Best markdown tutorial with online WYSIWYG Editior online](https://www.markdowntutorial.com/)
 2. User that need to draw **massive** uml and diagram **efficiently**.[Plantuml](!http://plantuml.com/)
 
 
