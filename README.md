@@ -12,7 +12,7 @@ min-doc is an **hackable simple documentation generation template** that support
 
 ## Target User
 1. User that are familar with markdown.[Best markdown tutorial with online WYSIWYG Editior online](https://www.markdowntutorial.com/)
-2. User that need to draw **massive** uml and diagram **efficiently**.[Plantuml](!http://plantuml.com/)
+2. User that need to draw **massive** uml and diagram **efficiently**.[What is Plantuml?](http://plantuml.com/)
 
 
 ## Usage
