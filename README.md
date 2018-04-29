@@ -1,6 +1,6 @@
 ## What is min-doc 
 
-min-doc is an **hackable simple documentation generation template** that support **.md=>html** and **.plantuml=>img** tool.
+min-doc is an **hackable simple documentation generation tool** that support **.md=>html** and **.plantuml=>img** tool.
 
 ## Advantage
 
