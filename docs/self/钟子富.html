@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>doc.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E7%AE%80%E4%BB%8B">简介</h1>
+<p>一个专业的软件工程师，在设计与开发大规模和高复杂度 Web 的应用程序有丰富的经验，喜欢作为一个成功
+团队的一部分。思想者、作家和工匠.
+精通: Program design, TDD, JS, react, redux, node js,Training
+擅长于: Cloud, AWS, PHP, Laravel 4</p>
+<h1 id="%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF">个人信息</h1>
+<p>姓 名： 钟子富<br>
+性 别： 男性出生年月： 1991-1<br>
+联系电话： 14716488649<br>
+邮箱： chungchi300@hotmail.com<br>
+目前所在地： 深圳<br>
+应聘工作地点： 深圳<br>
+可到岗时间: 1 個月<br>
+婚姻状况 : 未婚</p>
+<h1 id="%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86%E7%AE%80%E8%BF%B0">工作经历简述</h1>
+<h2 id="%E8%81%94%E5%90%88%E5%88%9B%E5%A7%8B%E4%BA%BA---rsc-tech-partner">联合创始人 - RSC Tech Partner</h2>
+<p>建立 BidFlows</p>
+<h2 id="it-%E5%B0%88%E5%AE%B6---madison-auction-limited">IT 專家 - Madison Auction Limited</h2>
+<h3 id="%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91">软件开发</h3>
+<ul>
+<li>在服务提供商停止使用 nodejs（typescript）和 reactjs 提供相关服务的短时间内，为 O2O 线上/线下拍卖平台 https://bid.mfwauction.com/。</li>
+<li>开发葡萄酒估算器</li>
+<li>开发中文版本的拍卖平台，该平台已部署到阿里云，以平稳地为中国客户服务。</li>
+<li>通过集成的错误报告工具和 JIRA 缩短软件开发周期。</li>
+</ul>
+<h3 id="%E9%80%9A%E8%BF%87%E4%B8%8E%E5%85%B6%E4%BB%96%E7%B3%BB%E7%BB%9F%E5%90%88%E4%BD%9C%E6%9D%A5%E6%8E%88%E6%9D%83%E5%85%AC%E5%8F%B8">通过与其他系统合作来授权公司</h3>
+<ul>
+<li>购买和管理在线和实时流媒体拍卖平台。开发第三方报告插件，可提供客户体验和后台效率。</li>
+<li>采购和管理 CRM，以提供更好的客户服务。通过自定义谈判获得约 40％的折扣。</li>
+<li>采购和管理 IT 知识的知识管理系统。</li>
+<li>与数字营销公司合作。</li>
+</ul>
+<h3 id="%E6%93%8D%E4%BD%9C">操作</h3>
+<p>安排第一场直播在线拍卖，其销售額为 2500 万。</p>
+<h2 id="%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88---astri">软件工程师 - ASTRI</h2>
+<ul>
+<li>程序设计</li>
+<li>在前端开发中采用和选择最佳实践来优化软件质量和开发速度。</li>
+<li>代码审查</li>
+<li>研究前端的新技术</li>
+<li>进行可行性测试以解决软件具有挑战性问题。</li>
+<li>优化前端程序</li>
+<li>与设计师，产品经理和客户合作，了解应用的流程和特点</li>
+<li>培训新的开发人员，以满足软件开发目标（例如 React，Redux，TDD，单元测试，API 测试）</li>
+<li>对不同项目和任务进行资源评估</li>
+<li>软件文档、实现和测试</li>
+</ul>
+<p>编程语言 : Javascript,Typescript<br>
+框架 : React,Redux</p>
+<h2 id="%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90%E5%91%98---aigens">程序分析员 - Aigens</h2>
+<ul>
+<li>公司移动产品的软件开发</li>
+<li>客户项目的软件开发</li>
+<li>与离岸开发人员进行管理和沟通，并将 IOS 项目发布到应用商店。</li>
+<li>与客户收集需求</li>
+</ul>
+<p>编程语言 : Php<br>
+框架 : Laravel</p>
+<h1 id="%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86">项目经历</h1>
+<h2 id="bidflows">BidFlows</h2>
+<ul>
+<li>react 拖放页面构建器</li>
+<li>实时在线/直播拍卖</li>
+<li>多租户(One Database for one client)</li>
+<li>多語言</li>
+<li>拍品客制化工具</li>
+<li>接入 cloudinary</li>
+</ul>
+<h2 id="%E6%95%B0%E5%AD%97%E7%97%85%E7%90%86%E8%AF%8A%E6%96%AD-web-%E5%89%8D%E7%AB%AF%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F">数字病理诊断 Web 前端应用程序</h2>
+<ul>
+<li>数字病理诊断 Web 前端应用程序的设计与开发.客户(金域检验在中国最大的第三方医学实验室组 )每年
+处理 1000 万个病例</li>
+<li>选型 React&amp;Redux 设计与开发 开发该 Web 数字病理诊断 Web 前端应用程序。</li>
+<li>创建、导出前端库（使用 Browserify and Rollup）,用于开发数字化病理系统的人工智能训练 Web 前
+端应用程序,该人工智能训练 Web 前端应用程序可容许每病例进行过千标注
+与客户和产品经理、交互设计师一起讨论产品设计，令使用该前端应用的用户在同行业中工作效率最
+高。</li>
+<li>API 设计（JSON 格式的 REST API，使用 JWT 令牌作为身份信息）设计网络层，使应用程序在**恶劣
+的网络环境下工作顺畅</li>
+<li>解决兼容性问题，允许 Web 前端应用可用于现代浏览器（IE11，Chrome，Firefox）。</li>
+</ul>
+<h2 id="wwwokibookcom%E9%A6%99%E6%B8%AF%E8%91%97%E5%90%8D%E7%9A%84-5-%E6%98%9F%E7%BA%A7%E9%A4%90%E5%8E%85%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%AE%A2%E5%B9%B3%E5%8F%B0">www.okibook.com(香港著名的 5 星级餐厅在线预订平台)</h2>
+<ul>
+<li>选型 laravel 并以 TDD 开发 MVC Web 后台应用以支持复杂的 预订流程</li>
+<li>多用户(客户、餐厅老板和网站管理员)权限和界面系统。</li>
+<li>部署 AWS 作为服务器。</li>
+</ul>
+<h2 id="advboomhong-kong-%E5%B9%BF%E5%91%8A%E8%AE%BE%E8%AE%A1%E5%92%8C%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0">Advboom(Hong Kong 广告设计和发布平台)</h2>
+<ul>
+<li>Web 前端广告设计和发布应用程序</li>
+<li>跨平台，可用于 ios,android,桌面</li>
+<li>解决兼容性问题，允许 Web 前端应用可用于现代浏览器（IE11，Chrome，Firefox）。</li>
+<li>集成 paypal 支付</li>
+</ul>
+<h2 id="wwwvycomhk%E9%A6%99%E6%B8%AF%E6%9C%80%E5%A4%A7%E7%9A%84%E7%BD%91%E4%B8%8A%E8%91%A1%E8%90%84%E9%85%92%E9%94%80%E5%94%AE-p2p-%E5%B9%B3%E5%8F%B0">www.vy.com.hk(香港最大的网上葡萄酒销售 P2P 平台)</h2>
+<ul>
+<li>选型 laravel 并以 TDD 开发 MVC Web 后台应用以支持复杂的 B2B 订单流程</li>
+<li>设计和实现过１０万葡萄酒的复杂搜索算法</li>
+<li>部署 AWS 作为服务器。</li>
+<li>多用户(客户、酒商和网站管理员)权限和界面系统。</li>
+<li>集成 Mailgun 以支持大量邮件发送和分析。</li>
+</ul>
+<h1 id="%E5%AD%A6%E5%8E%86">学历</h1>
+<p>香港公开大学学士学位
+计算机科学(2011 - 2014)
+活动和社团 : 咏春拳协会
+奖学金 : 2012 卓越绩效奖学金</p>
+
+</body>
+</html>
