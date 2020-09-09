@@ -18,11 +18,11 @@
 
 # 工作经历简述
 
-## 联合创始人 - RSC Tech Partner
+## 联合创始人 - RSC Tech Partner (3-2020 至 現在)
 
 建立 BidFlows
 
-## IT 專家 - Madison Auction Limited
+## IT 專家 - Madison Auction Limited (10-2018 至 2-2020)
 
 ### 软件开发
 
@@ -42,7 +42,7 @@
 
 安排第一场直播在线拍卖，其销售額为 2500 万。
 
-## 软件工程师 - ASTRI
+## 软件工程师 - ASTRI (5-2016 至 9-2018)
 
 - 程序设计
 - 在前端开发中采用和选择最佳实践来优化软件质量和开发速度。
@@ -58,7 +58,7 @@
 编程语言 : Javascript,Typescript  
 框架 : React,Redux
 
-## 程序分析员 - Aigens
+## 程序分析员 - Aigens (11-2014 至 2-2016)
 
 - 公司移动产品的软件开发
 - 客户项目的软件开发
