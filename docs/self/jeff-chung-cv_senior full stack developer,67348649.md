@@ -87,6 +87,9 @@ Fully responsible for the design and implementation work for
 
 # Work Experience
 
+## Qupital - Senior Software Engineer
+
+
 ## Rsc Tech Partner LLC - Co founder
 
 Dates Employed : Mar 2020 – Present
